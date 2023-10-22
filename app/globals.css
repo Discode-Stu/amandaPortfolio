@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;500;600&family=Open+Sans:wght@300;400;500&display=swap");
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,11 +19,23 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  color: black;
+  /* font-family: "Catamaran", sans-serif; */
+  /* font-family: "Open Sans", sans-serif; */
+  /* color: rgb(var(--foreground-rgb)); */
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+}
+
+.skew {
+  height: fit-content;
+  padding-bottom: 200px;
+  width: 100%;
+  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 85%);
+  background: #e5e7eb;
+  padding: 20px;
 }
