@@ -1,12 +1,13 @@
-import Head from "next/head"
+// import Head from "next/head"
 import { aboutMe1, aboutMe2, aboutMe3 } from "../_constants"
+
+export const metadata = {
+  title: "About Me",
+}
 
 const AboutPage = () => {
   return (
     <>
-      <Head>
-        <title>About Me</title>
-      </Head>
       <div className="relative min-h-screen min-w-screen">
         <h1 className="sm:ml-[100px] sm:text-left text-center my-10 mb-24 text-3xl">
           About Me

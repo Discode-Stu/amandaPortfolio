@@ -9,6 +9,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["var(--font-poppins)"],
+        italiana: ["var(--font-italiana)"],
+        karla: ["var(--font-karla)"],
+        oldStandard: ["var(--font-old-standard-tt)"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

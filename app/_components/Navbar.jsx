@@ -13,6 +13,7 @@ const Navbar = () => {
   const isAbout = path === "/about"
   const isWork = path === "/work"
   const isHome = path === "/"
+  const isResume = path === "/resume"
 
   const toggleMenu = () => {
     setShowMenu((prev) => !prev)
@@ -40,7 +41,7 @@ const Navbar = () => {
         {showMenu && (
           <div
             ref={menuRef}
-            className="absolute top-14 right-2 bg-gray-300 px-4 py-2 rounded shadow-lg"
+            className="z-50 absolute top-14 right-2 bg-gray-300 px-4 py-2 rounded shadow-lg"
           >
             <a
               href="/"
@@ -53,6 +54,12 @@ const Navbar = () => {
               className="block text-black mb-2 hover:text-gray-600 hover:transition hover:duration-300 hover:ease-in-out"
             >
               About me
+            </a>
+            <a
+              href="/resume"
+              className="block text-black mb-2 hover:text-gray-600 hover:transition hover:duration-300 hover:ease-in-out"
+            >
+              Resume
             </a>
             <a
               href="/work"
@@ -79,6 +86,13 @@ const Navbar = () => {
           style={{ borderBottom: isAbout ? "1px solid black" : "none" }}
         >
           About me
+        </a>
+        <a
+          href="/resume"
+          className="text-black mx-4"
+          style={{ borderBottom: isResume ? "1px solid black" : "none" }}
+        >
+          Resume
         </a>
         <a
           href="/work"

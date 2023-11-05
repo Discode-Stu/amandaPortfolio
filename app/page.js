@@ -1,9 +1,19 @@
-"use client"
 import Navbar from "@/app/_components/Navbar"
 import Image from "next/image"
+import Home from "./_screens/Home"
 
-export default function Home() {
-  return <main className="bg-white h-full">Amandas home page</main>
+export const metadata = {
+  title: "Amanda's Portfolio",
+}
+
+export default function HomePage() {
+  return (
+    <main className="h-full">
+      <div className="z-10">
+        <Home />
+      </div>
+    </main>
+  )
 }
 
 // <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">

@@ -1,14 +1,16 @@
 import "./globals.css"
 import Navbar from "./_components/Navbar"
 
-import { Poppins } from "next/font/google"
-import Footer from "./_components/Footer"
+import { Italiana, Karla, Old_Standard_TT } from "next/font/google"
 
-const poppins = Poppins({
+import Footer from "./_components/Footer"
+import Hero from "./_components/Hero"
+
+const old_standard_tt = Old_Standard_TT({
   subsets: ["latin"],
-  variable: "--font-poppins",
+  variable: "--font-old-standard-tt",
   fallback: ["system-ui", "Helvetica Neue", "Helvetica", "Arial"],
-  weight: ["300", "400", "500", "700", "900"],
+  weight: ["400"],
   display: "swap",
 })
 
@@ -19,11 +21,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${poppins.variable} font-sans`}>
-        <Navbar />
-        <section>{children}</section>
-        <Footer />
+    <html lang="en" style={{ scrollBehavior: "smooth" }}>
+      <body className={`${old_standard_tt.variable} font-oldStandard`}>
+        <div className="relative">
+          {/* <div className="z-10 fixed w-full">
+            <Navbar />
+          </div> */}
+          <div className="bg-img z-0 sm:h-screen" />
+
+          <div className="z-0 transform -translate-y-[0px]">
+            <section>{children}</section>
+          </div>
+
+          <div className="z-0 transform -translate-y-[0px] bg-white">
+            <Footer />
+          </div>
+        </div>
       </body>
     </html>
   )
